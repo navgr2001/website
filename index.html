@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>presentation</title>
+    <style>
+        /*Loading Screen Start*/
+.loader {
+    background-color: #8dc3c4;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%,-50%); 
+    z-index: 20000;
+    top: 50%;
+    left: 50%;
+}
+
+.devnames {
+    margin: 550px 350px 0px 350px;
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 50px;
+}
+
+.devnames span {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color:#fff;
+}
+
+.devnames i {
+	padding: 5px;
+	color: #D4AC0D;
+}
+
+.loader img {
+    position: absolute;
+    top: 30%;
+	left: 40%;
+	width: 16%;
+	height: 30%;
+	transform: translate(-50%,-50%);
+	-webkit-animation: breathing 1.5s ease-out infinite normal;
+    animation: breathing 1.5s ease-out infinite normal;
+}
+
+
+.loader.hidden {
+    animation: fadeOut;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes breathing {
+	0% {
+	  -webkit-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  
+	25% {
+	  -webkit-transform: scale(1);
+	  transform: scale(1);
+	}
+  
+	60% {
+	  -webkit-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  
+	100% {
+	  -webkit-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  }
+  
+  @keyframes breathing {
+	0% {
+	  -webkit-transform: scale(0.8);
+	  -ms-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  
+	25% {
+	  -webkit-transform: scale(1);
+	  -ms-transform: scale(1);
+	  transform: scale(1);
+	}
+  
+	60% {
+	  -webkit-transform: scale(0.8);
+	  -ms-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  
+	100% {
+	  -webkit-transform: scale(0.8);
+	  -ms-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  }
+/*Loading Screen End*/
+
+    </style>
+</head>
+<body>
+    <!-- loading page -->
+    <div class="loader">
+        <img src="Image/png.png" alt="loading">
+
+        <div class="devnames">
+            <span><i class="fas fa-male"></i>Akshayan Mohandas</span>
+            <span><i class="fas fa-male"></i>Naveen Grero</span>
+            <span><i class="fas fa-female"></i>Darshitha Baranasuriya</span>
+            <span><i class="fas fa-female"></i>Mithunan Yogenthiram</span>
+        </div>
+    </div>
+    <script>
+        setTimeout(function(){
+            window.location.href="homePage.html"
+            },10000);
+    </script>
+
+</body>
+</html>
